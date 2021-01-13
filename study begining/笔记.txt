@@ -1,0 +1,30 @@
+1、关于gcc和g++指令
+
+gcc和g++指令用于在控制台编译C/C++程序
+g++是c++的命令，以file.cpp为主。gcc用于file.c的文件
+
+g++ test.cpp   默认生成a.exe的文件，过程包含了编译和链接
+g++ -o test.exe test.cpp   -o是输出的意思，这样可以指定输出test.exe
+
+gcc/g++在执行编译工作的时候分为以下几步：
+1)、预处理，运用cpp预处理器生成.i的文件  g++ -E test.cpp > test.i
+2)、翻译，将预处理后的文件运用编译器egcs转换成汇编语言，生成.s文件  g++ -S test.cpp
+3)、汇编，将汇编文件通过汇编器as变成目标代码(机器语言)生成.o文件  g++ -c test.cpp
+4)、连接，将目标文件通过连接器ld生成可执行文件  g++ test.o -L C:\mingw64\lib\gcc\x86_64-w64-mingw32\8.1.0\include\iostream
+2、cin.get();   在return0 后面写,使得窗口保持打开
+3、关于main函数
+标准的应该是 int main() 或者int main(void)两者等同；使用main() 或者 void main()非常普遍，但是不标准，某些系统也许会不支持
+若在main()函数尾部没有遇到返回函数，则默认是return 0; 这条隐含的返回语句仅适用于main()函数
+运行程序从main()函数开始执行
+4、注释
+// c++的注释
+/* */c的注释，c++也可以使用
+5、c与c++的新旧头文件
+6、名称空间
+c++特性，将函数封装在一个名称空间的单元里。
+例如cout其实是std::cout但是若使用了using namespace std;就可以直接使用cout，但是这样在大型项目中存在问题，使用using std::cout会更好。
+让程序访问名称空间的方法有四种：
+1）将using namespace std;放在函数定义前，所有函数都可使用名称空间std中的元素
+2）将using namespace std;放在函数定义中，只有该函数可以使用
+3）使用特定的函数，例如using std::cout;
+4）完全不是用编译指令using，而是在需要的时候使用前缀std::
