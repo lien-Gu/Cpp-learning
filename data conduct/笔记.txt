@@ -10,4 +10,34 @@ sizeof返回类型的长度，单位为字节
 int test={24};
 int test{24};
 当括号中没有任何东西时候，变量被初始化为0
-4、
+4、整型字面值
+啥都没有  前面有0  前面有0x/0X
+十进制      八进制     十六进制
+5、cout<<hex；cout<<oct;改变变量显示方式   详细可见于hexoct2.cpp
+6、字符变量
+对于M字符  在char中'M'，在int中77;cin,cout遇到字符变量会自动把数字转换为字符
+7、Unicode和ISO10646 
+两个都是表示字符集的解决方案——为大量字符和符号提供标准数值编码，并根据类型将它们分组
+ASCII码是Unicode码的子集。Unicode给每一个字符指定一个编号——码点，类似于：U-222B，其中U表示
+Unicode编码，222B是该符号的16进制编码
+8、wchar_t                           char16_t还有char32_t
+   扩展字符集		char16_t ch1=u'p';
+  wcout、wcin		char32_t ch2=U'p';
+ wchar bob=L'p';		无符号类型
+9、bool类型
+bool变数值：true->1,false->0
+数值变布尔：0->false,非0->true
+10、const限定符
+比#define更好：可以指定常量类型；限定常量作用域；用于数组或者结构
+c++中应该尽量用const
+11、浮点数
+构成：值，缩放
+表示：12.34		2.52e+8
+类型：float、double、long double
+          32        64
+12、转换
+以{}方式初始化进行转换时：对类型要求严格，不允许缩窄(narrowing)
+在表达式中=进行转换时：有出现就进行的自动转化；也有不同类型同时出现在表达式中时的转换
+强制类型转换：(long) thorn ;  long(thorn)	thorn是变量名
+13、auto
+让编译器根据变量初始类型推断变量类型
