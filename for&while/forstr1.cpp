@@ -1,6 +1,5 @@
 //forstr1.cpp -- display letters in reverse order
 #include <iostream>
-
 int main()
 {
     using namespace std;
