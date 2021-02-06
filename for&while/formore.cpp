@@ -1,6 +1,7 @@
 //formore.cpp -- more loooping with foor
 #include<iostream>
 const int ArSize = 16;  //example of external declaration
+
 int main()
 {
     long long factorials[ArSize];
