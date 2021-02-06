@@ -1,6 +1,5 @@
 //forloop.cpp -- introduce the for loop
 #include<iostream>
-
 int main()
 {
     using namespace std;
