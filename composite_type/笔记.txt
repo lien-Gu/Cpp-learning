@@ -1,0 +1,24 @@
+1、getline()读取整行，只通过回车键确定输入结尾
+cin.getline(name,20)
+2、get()会调取换行符
+cin.get(name,ArSize);	或者cin.get(name,ArSize).get();
+cin.get();
+cin.get(dessert,ArSize);
+3、共用体：只能同时存一种
+4、枚举：
+设置枚举量的值，取值范围
+5、new于delete
+delete只能用于new分配的内存，delete不是应用于new的指针，而是new的地址
+new动态数组
+int *p = new int [10];
+delete [ ] p;
+6、自动存储、静态存储和动态存储怕p117
+自动存储：函数内部定义的常规变量使用自动存储空间，函数被调用时候自动产生，
+函数结束时候消亡。自动变量是一个局部变量，作用域是其所在的代码块。代码块
+是花括号包含的内容。存储与栈中。
+静态存储：整个程序执行时期都存在。在函数外定义变量，或者使用关键字static
+动态存储：new和delete管理类一个自由存储空间或者堆。使得数据的生命周期不
+完全受程序或者函数的生存时间控制。很有可能导致内存泄漏。
+7、codeblocks编译器没法使用auto
+在setting->compiler->Have g++ follow the C++11
+p120
